@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductResponse {
   id: number
   title: string
   handle: string
@@ -55,7 +55,7 @@ export interface Variant {
   title: string
   option1: string
   option2: string
-  option3: null
+  option3: string
   sku: string
   requires_shipping: boolean
   taxable: boolean
@@ -66,7 +66,7 @@ export interface Variant {
   options: string[]
   price: number
   weight: number
-  compare_at_price: null
+  compare_at_price: string
   inventory_management: string
   barcode: string
   featured_media: FeaturedMedia
@@ -78,7 +78,7 @@ export interface FeaturedImage {
   position: number
   created_at: Date
   updated_at: Date
-  alt: null
+  alt: string
   width: number
   height: number
   src: string

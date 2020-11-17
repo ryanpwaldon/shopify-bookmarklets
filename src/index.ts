@@ -12,9 +12,7 @@ class Scrape {
 
   async start() {
     const json = await this.fetchJson()
-    console.log(json)
     const variants = this.extractVariants(json)
-    console.log(variants)
     const csv = this.toCsv(variants)
     this.download(csv)
   }
@@ -36,7 +34,7 @@ class Scrape {
           Type: json.type,
           Vendor: json.vendor,
           'Body (HTML)': json.description,
-          'Image Src': json.featured_image,
+          'Image Src': `https:${json.featured_image}`,
           'Image Position': 1,
           'Option1 Name': options[0] || '',
           'Option1 Value': variant.option1 || '',
@@ -44,10 +42,10 @@ class Scrape {
           'Option2 Value': variant.option2 || '',
           'Option3 Name': options[2] || '',
           'Option3 Value': variant.option3 || '',
-          'Variant Image': variant.featured_image?.src || json.featured_image,
+          'Variant Image': variant.featured_image?.src || `https:${json.featured_image}`,
           'Variant Price': variant.price / 100,
           'Variant Requires Shipping': variant.requires_shipping,
-          'Variant Compare At Price': variant.compare_at_price,
+          'Variant Compare At Price': variant.compare_at_price / 100,
           'Variant Inventory Qty': 2
         } as Variant)
     )

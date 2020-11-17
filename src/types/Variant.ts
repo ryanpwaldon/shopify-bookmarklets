@@ -19,7 +19,7 @@ export interface Variant {
   'Variant Inventory Policy'?: string
   'Variant Fulfillment Service'?: string
   'Variant Price': number
-  'Variant Compare At Price'?: string
+  'Variant Compare At Price'?: number
   'Variant Requires Shipping': boolean
   'Variant Taxable'?: boolean
   'Variant Barcode'?: string

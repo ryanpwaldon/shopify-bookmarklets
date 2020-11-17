@@ -66,7 +66,7 @@ export interface Variant {
   options: string[]
   price: number
   weight: number
-  compare_at_price: string
+  compare_at_price: number
   inventory_management: string
   barcode: string
   featured_media: FeaturedMedia

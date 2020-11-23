@@ -1,5 +1,5 @@
-import { ProductResponse } from './types/ProductResponse'
-import { Variant } from './types/Variant'
+import { ProductResponse } from '../../types/ProductResponse'
+import { Variant } from '../../types/Variant'
 import { parse } from 'json2csv'
 
 class Scrape {

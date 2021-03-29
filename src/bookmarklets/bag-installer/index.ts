@@ -4,11 +4,8 @@ class Bookmarklet {
   }
 
   async start() {
-    document.documentElement.style.overflow = 'auto !important'
-    ;(document.querySelector('.PageOverlay') as HTMLElement).style.display = 'none !important'
-    ;(document.querySelector('#sidebar-cart') as HTMLElement).style.display = 'none !important'
     const script = document.createElement('script')
-    script.src = 'https://r2.au.ngrok.io/script.js'
+    script.src = 'https://bag-plugin-production.netlify.app/start.js'
     document.head.appendChild(script)
   }
 }

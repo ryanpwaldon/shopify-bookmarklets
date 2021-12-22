@@ -1,3 +1,3 @@
 # Shopify Bookmarklets
 
-Bookmarklets for automating Shopify related tasks.
+Generates bookmarklets for automating Shopify related tasks.
